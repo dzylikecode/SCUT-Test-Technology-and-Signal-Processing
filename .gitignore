@@ -1,3 +1,4 @@
+# metion
 .configs/
 .Archive/
 .markeditor/
@@ -17,3 +18,5 @@ Thumbs.db*
 /__wechat.json
 /*.sqlite3
 .db/
+# vs code
+.vscode/
