@@ -1,11 +1,8 @@
-
-
-
+# metion
+.configs/
 .Archive/
 .markeditor/
-!.metion/
-.metion/*
-!.metion/*_sort.config
+.metion/
 .markdown/
 .sync/
 .idea/
@@ -21,3 +18,5 @@ Thumbs.db*
 /__wechat.json
 /*.sqlite3
 .db/
+# vs code
+.vscode/
