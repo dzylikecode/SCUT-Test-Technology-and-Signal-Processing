@@ -1,30 +1,32 @@
-# 量的基本概念
+# 测试技术基础知识
 
-## 量和量纲
+## 量的基本概念
 
-### 量
+### 量和量纲
 
-量是指现象、物体或物质可定性区别和定量确定的一种属性。
+- 量
 
-- 量分为基本量和导出量。
+  量是指现象、物体或物质可定性区别和定量确定的一种属性。
 
-### 量纲
+  量分为基本量和导出量。
 
-- 量是根据其量纲来定性区别的，量纲不同的量不属于同一种量。因此，量纲可以理解为量的一种属性，用于定性区别量的种类。
+- 量纲
 
-- 任意量 Q 的量纲表达式为
+  量是根据其量纲来定性区别的，量纲不同的量不属于同一种量。因此，量纲可以理解为量的一种属性，用于定性区别量的种类。
 
-  $$
-  \operatorname{dim} Q=L^{\alpha} M^{\beta} T^{\gamma} I^{\delta} \theta^{\epsilon} N^{\zeta} J^{\eta}
-  $$
+  - 任意量 Q 的量纲表达式为
 
-- SI 基本单位
-  > [国际基本单位表格](https://zh.wikipedia.org/wiki/%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6#%E5%9F%BA%E6%9C%AC%E5%96%AE%E4%BD%8D)
-- SI 辅助单位: 弧度 rad 和球面角 sr
+    $$
+    \operatorname{dim} Q=L^{\alpha} M^{\beta} T^{\gamma} I^{\delta} \theta^{\epsilon} N^{\zeta} J^{\eta}
+    $$
 
-### 量值
+  - SI 基本单位
+    > [国际基本单位表格](https://zh.wikipedia.org/wiki/%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6#%E5%9F%BA%E6%9C%AC%E5%96%AE%E4%BD%8D)
+  - SI 辅助单位: 弧度 rad 和球面角 sr
 
-量的大小可以用量值来定量确定，量值是用数值和计量单位来表示的。
+  - 量值
+
+    量的大小可以用量值来定量确定，量值是用数值和计量单位来表示的。
 
 ### 基准-标准和量值的传递
 
@@ -306,7 +308,7 @@ $$
   式中:$t_{\beta}$ 表示置信概率为 $\beta$、自由度为($\nu =n - 1$)的 t 分布值，可从 t 分布表中查得。这种表达方式表示真值处于区间$[\overline x - t_{\beta} \widehat \sigma_{\overline x},\overline x + t_{\beta} \widehat \sigma_{\overline x}]$内的概率为 $\beta$。
 
 - 基于不确定度的表达方式
-  
+
   $$
   x _ { 0 } = x + \widehat \sigma_{\overline x} = x + \frac { S } { \sqrt { n } }
   $$
