@@ -63,14 +63,19 @@
 
 - 电桥的和差特性
 
-  $$
-  \begin{aligned}
-  &考虑变化后的关系:
-  e _ { o } = \frac { ( R _ { 1 } + \Delta R _ { 1 } ) ( R _ { 3 } + \Delta R _ { 3 } ) - ( R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 4 } +\Delta R _ { 2 } )  } { ( R _ { 1 } + \Delta R _ { 1 } + R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 3 } + \Delta R _ { 3 } + R _ { 4 } + \Delta R _ { 4 } ) } e_i\\
-  &假设: R_1 = R_2 = R_3 = R_4 = R_0, 且忽略 \Delta R_i 的高次项 \\
-  &则: e_o = \frac {1} {4} ( \frac {\Delta R_1} {R_0} - \frac {\Delta R_2} {R_0} + \frac {\Delta R_3} {R_0} - \frac {\Delta R_4} {R_0} ) e_i
-  \end{aligned}
-  $$
+  - 推导
+
+    考虑变化后的关系:
+
+    $$e _ { o } = \frac { ( R _ { 1 } + \Delta R _ { 1 } ) ( R _ { 3 } + \Delta R _ { 3 } ) - ( R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 4 } +\Delta R _ { 2 } )  } { ( R _ { 1 } + \Delta R _ { 1 } + R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 3 } + \Delta R _ { 3 } + R _ { 4 } + \Delta R _ { 4 } ) } e_i$$
+
+    假设:
+
+    $$R_1 = R_2 = R_3 = R_4 = R_0, 且忽略 \Delta R_i 的高次项$$
+
+    得:
+
+    $$e_o = \frac {1} {4} ( \frac {\Delta R_1} {R_0} - \frac {\Delta R_2} {R_0} + \frac {\Delta R_3} {R_0} - \frac {\Delta R_4} {R_0} ) e_i$$
 
   - 特性
 
@@ -104,13 +109,13 @@
 
         1 和 2, 或 1 和 4
 
-        $\Delta R1 = \Delta R2 = \Delta R$, 变化方向相反(带符号:$\Delta R1 = - \Delta R2$)
+        $\Delta R_1 = \Delta R_2 = \Delta R$, 变化方向相反(带符号:$\Delta R_1 = - \Delta R_2$)
 
       - 对接
 
         1 和 3
 
-        $\Delta R1 = \Delta R3 = \Delta R$, 变化方向相反变化方向相同
+        $\Delta R_1 = \Delta R_3 = \Delta R$, 变化方向相反变化方向相同
 
     - 全桥连接形式
 
