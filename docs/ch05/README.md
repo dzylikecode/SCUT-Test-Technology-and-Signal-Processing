@@ -66,9 +66,9 @@
   $$
   \begin{aligned}
   &考虑变化后的关系:
-  e _ { o } = \frac { ( R _ { 1 } + \Delta R _ { 1 } ) ( R _ { 3 } + \Delta R _ { 3 } ) - ( R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 4 } +\Delta R _ { 2 } )  } { ( R _ { 1 } + \Delta R _ { 1 } + R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 3 } + \Delta R _ { 3 } + R _ { 4 } + \Delta R _ { 4 } ) }\\
+  e _ { o } = \frac { ( R _ { 1 } + \Delta R _ { 1 } ) ( R _ { 3 } + \Delta R _ { 3 } ) - ( R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 4 } +\Delta R _ { 2 } )  } { ( R _ { 1 } + \Delta R _ { 1 } + R _ { 2 } + \Delta R _ { 2 } ) ( R _ { 3 } + \Delta R _ { 3 } + R _ { 4 } + \Delta R _ { 4 } ) } e_i\\
   &假设: R_1 = R_2 = R_3 = R_4 = R_0, 且忽略 \Delta R_i 的高次项 \\
-  &则: e_o = \frac {1} {4} ( \frac {\Delta R_1} {R_0} - \frac {\Delta R_2} {R_0} + \frac {\Delta R_3} {R_0} - \frac {\Delta R_4} {R_0} )
+  &则: e_o = \frac {1} {4} ( \frac {\Delta R_1} {R_0} - \frac {\Delta R_2} {R_0} + \frac {\Delta R_3} {R_0} - \frac {\Delta R_4} {R_0} ) e_i
   \end{aligned}
   $$
 
@@ -92,13 +92,13 @@
 
       工作桥臂:1 个
 
-      $$e _ { _ { 0 } } = \frac { \Delta R } { 4 R _ { 0 } } e _ { i }$$
+      $$e _ { o } = \frac { \Delta R } { 4 R _ { 0 } } e _ { i }$$
 
     - 半桥双臂连接形式
 
       工作桥臂:2 个
 
-      $$e _ { _ { 0 } } = \frac { \Delta R } { 2 R _ { 0 } } e _ { i }$$
+      $$e _ { o } = \frac { \Delta R } { 2 R _ { 0 } } e _ { i }$$
 
       - 邻接
 
@@ -118,11 +118,11 @@
 
       假设:$\Delta R_1 = -\Delta R_2 = \Delta R_3 = -\Delta R_4 = \Delta R$
 
-      $$e _ { _ { 0 } } = \frac { \Delta R } { R _ { 0 } } e _ { i }$$
+      $$e _ { o } = \frac { \Delta R } { R _ { 0 } } e _ { i }$$
 
 - 电桥的灵敏度定义
 
-  $$e _ { _ { 0 } } = \frac { \Delta R } { R _ { 0 } } e _ { i }$$
+  $$K = \frac { e _ { o } } { \Delta R } $$
 
   半桥双臂连接形式的灵敏度是半桥单臂形式的两倍; 而全桥连接形式的灵敏度是半桥单臂的四倍
 
