@@ -16,3 +16,9 @@
 - ch05
 
   - [模拟信号的调理与转换](ch05/README.md)
+
+- ch06
+
+  - [机械工程领域常见物理量的测量](ch06/README.md)
+
+- [review](review/README.md)
