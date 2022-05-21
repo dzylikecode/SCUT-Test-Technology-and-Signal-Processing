@@ -13,6 +13,8 @@
 
   - [homework](ch02/HW/HW.md)
 
+  - [matlab](ch02/matlab/README.md)
+
 - ch03
 
   - [测试系统的基本特性](ch03/README.md)
