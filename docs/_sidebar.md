@@ -34,3 +34,5 @@
   - [homework](ch06/HW/HW.md)
 
 - [review](review/README.md)
+
+- [matlab-intro](matlab.md)

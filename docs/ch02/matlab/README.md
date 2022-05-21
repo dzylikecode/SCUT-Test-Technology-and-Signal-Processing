@@ -1,6 +1,6 @@
 # Matlab 在信号描述与分析中的应用
 
-- <a href = 'code/Matlab/ch02/signal_description.m'> code preview<a>
+- <a href = 'code/Matlab/ch02/signal_description.m' target="_self"> code preview <a>
 - <a href = '/code/Matlab/ch02/signal_description.m'> code download <a>
 
 ## 自相关函数的周期提取
