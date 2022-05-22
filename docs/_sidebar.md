@@ -21,11 +21,15 @@
 
   - [homework](ch03/HW/HW.md)
 
+  - [matlab](ch03/matlab/README.md)
+
 - ch05
 
   - [模拟信号的调理与转换](ch05/README.md)
 
   - [homework](ch05/HW/HW.md)
+
+  - [matlab](ch05/matlab/README.md)
 
 - ch06
 
