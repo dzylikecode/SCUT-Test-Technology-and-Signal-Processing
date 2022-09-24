@@ -1,0 +1,2 @@
+- [home](https://dzylikecode.github.io/#/)
+- [SCUT](https://dzylikecode.github.io/SCUT-Electromechanical/#/)

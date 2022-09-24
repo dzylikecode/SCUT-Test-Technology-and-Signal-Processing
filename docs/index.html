@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>测试技术与信号处理</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description" />
+    <meta name="description" content="测试技术与信号处理的学习笔记" />
+    <meta name="keywords" content="测试技术, 信号处理" />
+    <meta name="author" content="Dz" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
+    <!-- docsify-themeable -->
     <link
       rel="stylesheet"
-      href="//fastly.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+      media="(prefers-color-scheme: dark)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
     />
-    <!-- latex -->
     <link
       rel="stylesheet"
-      href="//fastly.jsdelivr.net/npm/katex@latest/dist/katex.min.css"
+      media="(prefers-color-scheme: light)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
     />
-    <!-- dark mode -->
+    <!-- End -->
+    <!-- begin for docsify katex -->
     <link
       rel="stylesheet"
-      href="//fastly.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
-      title="docsify-darklight-theme"
-      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
     />
-    <!-- mind map -->
-    <!-- markmap is based on d3 -->
-    <script src="//unpkg.com/d3@3/d3.min.js"></script>
-    <script src="//unpkg.com/markmap@latest/lib/d3-flextree.js"></script>
-    <script src="//unpkg.com/markmap@latest/lib/view.mindmap.js"></script>
-    <link
-      rel="stylesheet"
-      href="//unpkg.com/markmap@latest/style/view.mindmap.css"
-    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+    ></script>
+    <!-- the version of marked must between 2.1.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4"></script>
+    <!-- End -->
     <!-- slidebar collapse -->
     <link
       rel="stylesheet"
-      href="//fastly.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
+      href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
     />
     <!-- mermaid -->
     <link
       rel="stylesheet"
-      href="//fastly.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+      href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
     />
-    <script src="//fastly.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <!-- End -->
+    <style type="text/css">
+      iframe {
+        display: block;
+        border: none;
+        height: 75vh;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -53,23 +63,22 @@
       mermaid.initialize({ startOnLoad: false });
 
       window.$docsify = {
-        name: "Tree", // 目录的标题
-        repo: "https://github.com/dzylikecode/SCUT_3_Test-Technology-and-Signal-Processing", // 右上角的挂件
-        loadSidebar: true,
-        subMaxLevel: 4, // 子目录最大层级, 有助于显示 markdown 的层级
-        auto2top: true, // 自动跳转至顶部
-        mindmap: {
-          markmap: {
-            preset: "colorful", // or default
-            linkShape: "diagonal", // or bracket
-          },
+        name: "目录", // 目录的标题
+        repo: "https://github.com/dzylikecode/SCUT-Test-Technology-and-Signal-Processing", // 右上角的挂件
+        loadNavbar: "navigation.md",
+        loadSidebar: "summary.md",
+        alias: {
+          "/.*/navigation.md": "/navigation.md",
+          "/.*/summary.md": "/summary.md",
         },
+        subMaxLevel: 3, // 子目录最大层级, 有助于显示 markdown 的层级
+        auto2top: true, // 自动跳转至顶部
         markdown: {
           renderer: {
             code: function (code, lang) {
               if (lang === "mermaid") {
                 return (
-                  '<div class="mermaid">' +
+                  '<div class="mermaid" style="background:#E1EFD9" >' +
                   mermaid.render("mermaid-svg-" + num++, code) +
                   "</div>"
                 );
@@ -78,19 +87,126 @@
             },
           },
         },
+        plugins: [
+          function (hook, vm) {
+            hook.beforeEach(function (html) {
+              let url =
+                "https://github.com/dzylikecode/SCUT-Test-Technology-and-Signal-Processing/blob/master/docs/" +
+                vm.route.file;
+              let editHtml = "[:memo: EDIT DOCUMENT](" + url + ")\n";
+              return (
+                editHtml +
+                html.replace(
+                  /<a\s+(?:[^>]*?\s+)?href\s*=\s*(["'])#(.*?)\1.*?>/g,
+                  (m, g1, g2) => m.replace(g2, vm.route.path + "#" + g2)
+                )
+              );
+            });
+          },
+        ],
       };
     </script>
-    <!-- Docsify v4 -->
-    <script src="//fastly.jsdelivr.net/npm/docsify@4"></script>
     <!-- docsify-katex for latex -->
-    <script src="//fastly.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-    <!-- dark mode -->
-    <script src="//fastly.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+    <script>
+      // import katex from "katex";
+      // import marked from "marked";
+      (function () {
+        let originMarkdown = window.$docsify.markdown;
+        let newMarked = marked; // version above 2.1.0
+        function newMarkdown(originMarked, originRenderer) {
+          // in docsify.js: `window.marked = marked;`
+          // this will overwrite the marked
+          // here `let newMarked = marked;` will not right
+          function isFn(obj) {
+            return typeof obj === "function";
+          }
+          const mathExtension = {
+            name: "math",
+            level: "inline",
+            start(src) {
+              let index = src.match(/\$/)?.index;
+              return index;
+            },
+            tokenizer(src, tokens) {
+              const blockRule = /^\$\$((\\.|[^\$\\])+)\$\$/;
+              const inlineRule = /^\$((\\.|[^\$\\])+)\$/;
+              let match;
+              if ((match = blockRule.exec(src))) {
+                return {
+                  type: "math",
+                  raw: match[0],
+                  text: match[1].trim(),
+                  mathLevel: "block",
+                };
+              } else if ((match = inlineRule.exec(src))) {
+                return {
+                  type: "math",
+                  raw: match[0],
+                  text: match[1].trim(),
+                  mathLevel: "inline",
+                };
+              }
+            },
+            renderer(token) {
+              if (token.mathLevel === "block") {
+                return katex.renderToString(token.text, {
+                  throwOnError: false,
+                  displayMode: true,
+                });
+              } else if (token.mathLevel === "inline") {
+                return katex.renderToString(token.text, {
+                  throwOnError: false,
+                  displayMode: false,
+                });
+              }
+            },
+          };
+          const merge =
+            Object.assign ||
+            function (to) {
+              for (let i = 1; i < arguments.length; i++) {
+                const from = Object(arguments[i]);
+                for (const key in from) {
+                  if (hasOwn.call(from, key)) {
+                    to[key] = from[key];
+                  }
+                }
+              }
+              return to;
+            };
+
+          let opts = originMarkdown || {};
+
+          if (isFn(opts)) {
+            opts = opts.apply(
+              this, // make it right: return this.origin.code(src);
+              originMarked,
+              originRenderer
+            ).defaults;
+          } else {
+            opts = merge(opts, {
+              renderer: merge(originRenderer, opts.renderer),
+            });
+          }
+          newMarked.setOptions(opts);
+          newMarked.use({ extensions: [mathExtension] });
+
+          return newMarked.parse;
+        }
+        window.$docsify.markdown = newMarkdown;
+      })();
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <!-- copy to clipboard -->
-    <script src="//fastly.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-    <!-- markmap for mind map -->
-    <script src="//unpkg.com/docsify-mindmap/dist/docsify-mindmap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
     <!-- slidebar collapse -->
-    <script src="//fastly.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <!-- search -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <!-- zoom image -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <!-- docsify-themeable -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   </body>
 </html>

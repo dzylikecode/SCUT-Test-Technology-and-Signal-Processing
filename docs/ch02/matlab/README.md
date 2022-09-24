@@ -1,8 +1,5 @@
 # Matlab 在信号描述与分析中的应用
 
-- <a href = 'https://github.com/dzylikecode/SCUT_3_Test-Technology-and-Signal-Processing/blob/master/code/Matlab/ch02/signal_description.m' target="_self"> code preview <a>
-- <a href = '/code/Matlab/ch02/signal_description.m'> code download <a>
-
 ## 自相关函数的周期提取
 
 - 自相关函数
@@ -24,3 +21,7 @@
   从原信号当中很难看到信号的结构, 用自功率谱容易看出它主要由两个简写分量的频率构成
 
 ## 模拟信号采样
+
+## reference
+
+- [code](https://github.com/dzylikecode/SCUT-Test-Technology-and-Signal-Processing/blob/master/code/Matlab/ch02/signal_description.m)

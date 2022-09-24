@@ -1,8 +1,5 @@
 # Matlab 在测试系统分析中的应用
 
-- [code preview](https://github.com/dzylikecode/SCUT_3_Test-Technology-and-Signal-Processing/blob/master/code/Matlab/ch03/test_system_analyze.m)
-- <a href="/code/Matlab/ch03/test_system_analyze.m">code download</a>
-
 ## 传递函数的 matlab 显示
 
 ## 利用传递函数求系统响应
@@ -20,3 +17,7 @@
 ## 频率特性
 
 ## 伯德图
+
+## reference
+
+- [code](https://github.com/dzylikecode/SCUT-Test-Technology-and-Signal-Processing/blob/master/code/Matlab/ch03/test_system_analyze.m)
